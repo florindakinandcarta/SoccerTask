@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/teamGenerator">
+
+    <fragment
+        android:id="@+id/teamDetails"
+        android:name="com.example.soccertask.ui.teamDetails.TeamDetails"
+        tools:layout="@layout/team_details"
+        android:label="TeamDetails" >
+        <argument
+            android:name="team_name_data"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_points"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_wins"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_loses"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_draws"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <action
+            android:id="@+id/action_teamDetails_to_teamGenerator"
+            app:destination="@id/teamGenerator" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamGenerator"
+        android:name="com.example.soccertask.ui.teamGenerator.TeamGenerator"
+        tools:layout="@layout/team_generator"
+        android:label="TeamGenerator" >
+        <action
+            android:id="@+id/action_teamGenerator_to_teamDetails"
+            app:destination="@id/teamDetails" />
+        <argument
+            android:name="team_name_data"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_points"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_wins"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_loses"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+        <argument
+            android:name="team_draws"
+            app:argType="string"
+            android:defaultValue=" "
+            app:nullable="true"
+            />
+    </fragment>
+</navigation>
