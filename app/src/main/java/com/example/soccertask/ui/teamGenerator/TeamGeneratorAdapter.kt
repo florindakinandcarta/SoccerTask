@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.soccertask.R
-import com.example.soccertask.data.Team
 import com.example.soccertask.databinding.TeamItemBinding
+import com.example.soccertask.data.source.Team
 
-class TeamGeneratorAdapter(private var teams:List<Team>): RecyclerView.Adapter<TeamGeneratorAdapter.ViewHolder>() {
+class TeamGeneratorAdapter: RecyclerView.Adapter<TeamGeneratorAdapter.ViewHolder>() {
     inner class ViewHolder( val binding: TeamItemBinding ):
         RecyclerView.ViewHolder(binding.root)
-
+    private var teams = listOf<Team>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = TeamItemBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -21,13 +21,15 @@ class TeamGeneratorAdapter(private var teams:List<Team>): RecyclerView.Adapter<T
         return ViewHolder(binding)
     }
 
-    override fun getItemCount(): Int {
-        return teams.size
-    }
-    fun updateTeamsList(updatedList: List<Team>){
-        teams = updatedList
+    fun setTeams(teams: List<Team>){
+        this.teams = teams
         notifyDataSetChanged()
     }
+    fun sortByPointsDescending(){
+        teams = teams.sortedByDescending { it.points }
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val currentTeam = teams[position]
         with(holder.binding){
@@ -46,5 +48,8 @@ class TeamGeneratorAdapter(private var teams:List<Team>): RecyclerView.Adapter<T
                 )
             }
         }
+    }
+    override fun getItemCount(): Int {
+        return teams.size
     }
 }

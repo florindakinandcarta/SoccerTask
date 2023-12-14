@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/teamGenerator"
-        android:name="com.example.soccertask.ui.teamGenerator.TeamGenerator"
+        android:name="com.example.soccertask.ui.teamGenerator.TeamFragment"
         tools:layout="@layout/team_generator"
         android:label="TeamGenerator" >
         <action
