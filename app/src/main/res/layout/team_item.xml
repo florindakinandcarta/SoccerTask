@@ -1,29 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<TextView
-    android:id="@+id/teamName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:text="Team Name"
-    android:layout_margin="20dp"
-    android:textSize="20dp"
-    />
-    <TextView
-        android:id="@+id/teamPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/teamName"
-        app:layout_constraintBottom_toBottomOf="@id/teamName"
-        android:text="54"
-        android:textSize="20dp"
-        android:layout_marginEnd="20dp"
-        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+        <variable
+            name="background_color"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/teamItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@color/background_color">
+<!--                this needs to change latter it's just for display now-->
+
+                <TextView
+                    android:id="@+id/teamStanding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/teamLogo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintStart_toEndOf="@id/teamStanding"
+                    app:layout_constraintTop_toTopOf="@id/teamStanding"
+                    app:layout_constraintEnd_toStartOf="@id/teamName"
+                    app:layout_constraintBottom_toBottomOf="@+id/teamStanding"
+                    android:layout_marginStart="5dp"
+                    />
+                <TextView
+                    android:id="@+id/teamCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/teamName"
+                    app:layout_constraintTop_toTopOf="@id/teamLogo"
+                    app:layout_constraintBottom_toTopOf="@+id/teamName"
+                    android:text="Boston"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/teamName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/teamLogo"
+                    app:layout_constraintBottom_toBottomOf="@id/teamLogo"
+                    android:text="Team Name"
+                    android:layout_marginStart="5dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/teamPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="54"
+                    android:textSize="40sp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/teamName"
+                    app:layout_constraintBottom_toBottomOf="@id/teamName"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
