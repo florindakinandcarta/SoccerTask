@@ -3,16 +3,20 @@ package com.example.soccertask.data
 import com.example.soccertask.data.source.Team
 import kotlin.random.Random
 
+private const val NUMBER_OF_TEAMS = 20
  class TeamGenerator{
     fun generateTeams(): List<Team> {
         val teams = mutableListOf<Team>()
-        while (teams.size < 20) {
+        while (teams.size < NUMBER_OF_TEAMS) {
             val newTeam = Team(
-                "Team ${
-                    Random.nextInt(
-                        20
+                buildString {
+                    append("Team ")
+                    append(
+                        Random.nextInt(
+                        NUMBER_OF_TEAMS
                     )
-                }"
+                    )
+                }
             )
             teams.add(newTeam)
         }

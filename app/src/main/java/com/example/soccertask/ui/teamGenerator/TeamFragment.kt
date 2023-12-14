@@ -5,19 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.soccertask.data.FixturesGenerator
 import com.example.soccertask.databinding.TeamGeneratorBinding
 import com.example.soccertask.data.TeamGenerator
 import com.example.soccertask.data.GenerateResults
+import com.example.soccertask.ui.TeamViewModel
 
 class TeamFragment: Fragment() {
     private lateinit var binding: TeamGeneratorBinding
     private lateinit var adapter: TeamGeneratorAdapter
-    private val teamsGenerator = TeamGenerator()
-    private val fixtureGenerator = FixturesGenerator()
-    private val generatedTeams = teamsGenerator.generateTeams()
-    private val results = GenerateResults(generatedTeams)
+    private val viewModel: TeamViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -34,16 +33,8 @@ class TeamFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.teamsList.layoutManager = LinearLayoutManager(activity)
-        adapter  = TeamGeneratorAdapter()
-
-        val fixturesGenerator = fixtureGenerator.generateFixtures(generatedTeams)
-        val results = results.generateResults(fixturesGenerator)
-
-        adapter.setTeams(results)
+        binding.teamsList.layoutManager = LinearLayoutManager(requireActivity())
+        adapter  = TeamGeneratorAdapter(viewModel)
         binding.teamsList.adapter = adapter
-        binding. sort.setOnClickListener {
-           adapter.sortByPointsDescending()
-        }
     }
 }
