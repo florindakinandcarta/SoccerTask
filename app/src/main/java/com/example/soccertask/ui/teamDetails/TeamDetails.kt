@@ -5,15 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
-import com.example.soccertask.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.soccertask.data.source.Team
 import com.example.soccertask.databinding.TeamDetailsBinding
+import com.example.soccertask.ui.TeamViewModel
 
 class TeamDetails: Fragment() {
     private lateinit var binding: TeamDetailsBinding
-    private val args: TeamDetailsArgs by navArgs()
-
+    private lateinit var adapter: TeamDetailsAdapter
+    val args: TeamDetailsArgs by navArgs()
+    private  val viewModel: TeamViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,17 +32,24 @@ class TeamDetails: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        with(binding){
-            teamNameDetails.text = args.teamNameData
-            teamPointsDetails.text = args.teamPoints.toString()
-            gamesWonPoints.text = args.teamWins.toString()
-            gamesLostPoints.text = args.teamLoses.toString()
-            gamesDrawPoints.text = args.teamDraws.toString()
-            back.setOnClickListener{
-                findNavController().navigate(
-                    R.id.action_teamDetails_to_teamGenerator
-                )
+        context?.let { safeContext ->
+            viewModel.fetchTeamsInfo(safeContext.assets.open("teams.json")
+                .bufferedReader().use { it.readText() })
+            viewModel.teamResults.observe(viewLifecycleOwner) { results ->
+                val fixtures: List<Pair<Team, Team>> = viewModel.generateFixtures(results)
+                adapter.filterGamesPlayed(args.teamNameData, fixtures)
+            }
+        }
+            with(binding) {
+                gamesPlayedList.layoutManager = LinearLayoutManager(activity)
+                adapter = TeamDetailsAdapter()
+                gamesPlayedList.adapter = adapter
+
+                teamNameDetails.text = args.teamNameData
+                simpleName.text = args.simpleName
+                teamCityDetails.text = args.city
+                teamPointsDetails.text = args.teamPoints
             }
         }
     }
-}
+

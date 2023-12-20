@@ -1,0 +1,244 @@
+{
+  "teams_list": [
+    {
+      "teamId": 1610612737,
+      "abbreviation": "ATL",
+      "teamName": "Atlanta Hawks",
+      "simpleName": "Hawks",
+      "location": "Atlanta",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612737/2023/01/atl_hawks_primary_icon.svg"
+    },
+    {
+      "teamId": 1610612738,
+      "abbreviation": "BOS",
+      "teamName": "Boston Celtics",
+      "simpleName": "Celtics",
+      "location": "Boston",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612738/2022/05/celtics_secondary.svg"
+    },
+    {
+      "teamId": 1610612751,
+      "abbreviation": "BKN",
+      "teamName": "Brooklyn Nets",
+      "simpleName": "Nets",
+      "location": "Brooklyn",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612751/2023/04/bkn-no-bleed.svg"
+    },
+    {
+      "teamId": 1610612766,
+      "abbreviation": "CHA",
+      "teamName": "Charlotte Hornets",
+      "simpleName": "Hornets",
+      "location": "Charlotte",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612766/2022/04/hornets_logo2.svg"
+    },
+    {
+      "teamId": 1610612741,
+      "abbreviation": "CHI",
+      "teamName": "Chicago Bulls",
+      "simpleName": "Bulls",
+      "location": "Chicago",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612741/2021/10/bulls-svg.svg"
+    },
+    {
+      "teamId": 1610612739,
+      "abbreviation": "CLE",
+      "teamName": "Cleveland Cavaliers",
+      "simpleName": "Cavaliers",
+      "location": "Cleveland",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612739/2022/03/Asset-4-3.svg"
+    },
+    {
+      "teamId": 1610612742,
+      "abbreviation": "DAL",
+      "teamName": "Dallas Mavericks",
+      "simpleName": "Mavericks",
+      "location": "Dallas",
+      "imgUrl": "https://mavs.wpenginepowered.com/wp-content/themes/mavs/images/logo.svg"
+    },
+    {
+      "teamId": 1610612743,
+      "abbreviation": "DEN",
+      "teamName": "Denver Nuggets",
+      "simpleName": "Nuggets",
+      "location": "Denver",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612743/2021/11/dnuggets-primary-web.svg"
+    },
+    {
+      "teamId": 1610612765,
+      "abbreviation": "DET",
+      "teamName": "Detroit Pistons",
+      "simpleName": "Pistons",
+      "location": "Detroit",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612765/2021/09/dp-primary.svg"
+    },
+    {
+      "teamId": 1610612744,
+      "abbreviation": "GSW",
+      "teamName": "Golden State Warriors",
+      "simpleName": "Warriors",
+      "location": "Golden State",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612744/2022/06/gsw-logo-1920.svg"
+    },
+    {
+      "teamId": 1610612745,
+      "abbreviation": "HOU",
+      "teamName": "Houston Rockets",
+      "simpleName": "Rockets",
+      "location": "Houston",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612745/2023/10/logo-6.46.56-PM.svg"
+    },
+    {
+      "teamId": 1610612754,
+      "abbreviation": "IND",
+      "teamName": "Indiana Pacers",
+      "simpleName": "Pacers",
+      "location": "Indiana",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612754/2021/10/logo-pacers.svg"
+    },
+    {
+      "teamId": 1610612746,
+      "abbreviation": "LAC",
+      "teamName": "Los Angeles Clippers",
+      "simpleName": "Clippers",
+      "location": "Los Angeles",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612746/2022/04/LAClippers_Primary_Icon_pms.svg"
+    },
+    {
+      "teamId": 1610612747,
+      "abbreviation": "LAL",
+      "teamName": "Los Angeles Lakers",
+      "simpleName": "Lakers",
+      "location": "Los Angeles",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612747/2021/12/lakers_70x70.svg"
+    },
+    {
+      "teamId": 1610612763,
+      "abbreviation": "MEM",
+      "teamName": "Memphis Grizzlies",
+      "simpleName": "Grizzlies",
+      "location": "Memphis",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612763/2021/10/MG_icon_white.svg"
+    },
+    {
+      "teamId": 1610612748,
+      "abbreviation": "MIA",
+      "teamName": "Miami Heat",
+      "simpleName": "Heat",
+      "location": "Miami",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612748/2023/12/MIA-culture.svg"
+    },
+    {
+      "teamId": 1610612749,
+      "abbreviation": "MIL",
+      "teamName": "Milwaukee Bucks",
+      "simpleName": "Bucks",
+      "location": "Milwaukee",
+      "imgUrl": ""
+    },
+    {
+      "teamId": 1610612750,
+      "abbreviation": "MIN",
+      "teamName": "Minnesota Timberwolves",
+      "simpleName": "Timberwolves",
+      "location": "Minnesota",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612750/2021/11/logo-1.svg"
+    },
+    {
+      "teamId": 1610612740,
+      "abbreviation": "NOP",
+      "teamName": "New Orleans Pelicans",
+      "simpleName": "Pelicans",
+      "location": "New Orleans",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612740/2021/12/pelicans_primary_logo.svg"
+    },
+    {
+      "teamId": 1610612752,
+      "abbreviation": "NYK",
+      "teamName": "New York Knicks",
+      "simpleName": "Knicks",
+      "location": "New York",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612752/2022/10/NYK2223-PRIMARY-LOGO.svg"
+    },
+    {
+      "teamId": 1610612760,
+      "abbreviation": "OKC",
+      "teamName": "Oklahoma City Thunder",
+      "simpleName": "Thunder",
+      "location": "Oklahoma City",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612760/2021/12/logo.svg"
+    },
+    {
+      "teamId": 1610612753,
+      "abbreviation": "ORL",
+      "teamName": "Orlando Magic",
+      "simpleName": "Magic",
+      "location": "Orlando",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612753/2023/08/35th-Anniversary-Logo.svg"
+    },
+    {
+      "teamId": 1610612755,
+      "abbreviation": "PHI",
+      "teamName": "Philadelphia 76ers",
+      "simpleName": "76ers",
+      "location": "Philadelphia",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612755/2022/06/76CoS-PrimaryIconRev-471x471-1.svg"
+    },
+    {
+      "teamId": 1610612756,
+      "abbreviation": "PHX",
+      "teamName": "Phoenix Suns",
+      "simpleName": "Suns",
+      "location": "Phoenix",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612756/2022/08/suns-logo.svg"
+    },
+    {
+      "teamId": 1610612757,
+      "abbreviation": "POR",
+      "teamName": "Portland Trail Blazers",
+      "simpleName": "Trail Blazers",
+      "location": "Portland",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612757/2022/03/tb_primary_rgb.svg"
+    },
+    {
+      "teamId": 1610612758,
+      "abbreviation": "SAC",
+      "teamName": "Sacramento Kings",
+      "simpleName": "Kings",
+      "location": "Sacramento",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612758/2022/04/Kings-Primary.svg"
+    },
+    {
+      "teamId": 1610612759,
+      "abbreviation": "SAS",
+      "teamName": "San Antonio Spurs",
+      "simpleName": "Spurs",
+      "location": "San Antonio",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612759/2022/05/GlobalLogo_WHT-1.svg"
+    },
+    {
+      "teamId": 1610612761,
+      "abbreviation": "TOR",
+      "teamName": "Toronto Raptors",
+      "simpleName": "Raptors",
+      "location": "Toronto",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612761/2021/09/Toronto-Raptors.svg"
+    },
+    {
+      "teamId": 1610612762,
+      "abbreviation": "UTA",
+      "teamName": "Utah Jazz",
+      "simpleName": "Jazz",
+      "location": "Utah",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612762/2022/06/UTA-Primary-White.svg"
+    },
+    {
+      "teamId": 1610612763,
+      "abbreviation": "WAS",
+      "teamName": "Washington Wizards",
+      "simpleName": "Wizards",
+      "location": "Washington",
+      "imgUrl": "https://cdn.nba.com/teams/uploads/sites/1610612764/2022/06/wiz-primary.svg"
+    }
+  ]
+}

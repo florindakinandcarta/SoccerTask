@@ -23,19 +23,13 @@
             app:nullable="true"
             />
         <argument
-            android:name="team_wins"
+            android:name="simple_name"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
             />
         <argument
-            android:name="team_loses"
-            app:argType="string"
-            android:defaultValue=" "
-            app:nullable="true"
-            />
-        <argument
-            android:name="team_draws"
+            android:name="city"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
@@ -65,19 +59,13 @@
             app:nullable="true"
             />
         <argument
-            android:name="team_wins"
+            android:name="simple_name"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
             />
         <argument
-            android:name="team_loses"
-            app:argType="string"
-            android:defaultValue=" "
-            app:nullable="true"
-            />
-        <argument
-            android:name="team_draws"
+            android:name="city"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"

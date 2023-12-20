@@ -7,21 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.soccertask.data.FixturesGenerator
 import com.example.soccertask.databinding.TeamGeneratorBinding
-import com.example.soccertask.data.TeamGenerator
-import com.example.soccertask.data.GenerateResults
 import com.example.soccertask.ui.TeamViewModel
 
 class TeamFragment: Fragment() {
     private lateinit var binding: TeamGeneratorBinding
-    private lateinit var adapter: TeamGeneratorAdapter
-    private val viewModel: TeamViewModel by viewModels()
-
-
+    private lateinit var adapter: TeamAdapter
+    private  val viewModel: TeamViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
+
         savedInstanceState: Bundle?
     ): View {
         binding = TeamGeneratorBinding.inflate(
@@ -33,8 +29,15 @@ class TeamFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.teamsList.layoutManager = LinearLayoutManager(requireActivity())
-        adapter  = TeamGeneratorAdapter(viewModel)
+        context?.let { safeContext ->
+            viewModel.fetchTeamsInfo(safeContext.assets.open("teams.json")
+                .bufferedReader().use { it.readText() })
+            viewModel.teamResults.observe(viewLifecycleOwner) { results ->
+                adapter.submitTeamList(results)
+            }
+        }
+        binding.teamsList.layoutManager = LinearLayoutManager(activity)
+        adapter = TeamAdapter()
         binding.teamsList.adapter = adapter
     }
 }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SoccerTask</string>
+    <string name="teamNameDetails">Team Name Details</string>
+    <string name="randomNumber">42</string>
+    <string name="coachName">Florinda Hasani</string>
+    <string name="city">Prishtina</string>
+    <string name="gamesPlayed">Games Played</string>
+    <string name="firstTeam">First team</string>
+    <string name="vs">vs</string>
+    <string name="minus">-</string>
+
 </resources>
