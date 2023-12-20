@@ -42,18 +42,18 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         />
-    <TextView
-        android:id="@+id/simpleName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/teamNameDetails"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/teamNameDetails"
-        app:layout_constraintStart_toStartOf="@id/teamNameDetails"
-        />
+        <TextView
+            android:id="@+id/simpleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/teamNameDetails"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/teamNameDetails"
+            app:layout_constraintStart_toStartOf="@id/teamNameDetails"
+            />
         <TextView
             android:id="@+id/teamCityDetails"
             android:layout_width="wrap_content"
@@ -66,19 +66,19 @@
             app:layout_constraintEnd_toEndOf="@+id/teamPointsDetails"
             app:layout_constraintTop_toBottomOf="@+id/teamPointsDetails"
             />
-    <TextView
-        android:id="@+id/gamesPlayedTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/gamesPlayed"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/simpleName"
-        app:layout_constraintStart_toStartOf="@+id/gamesPlayedList"
-        />
+        <TextView
+            android:id="@+id/gamesPlayedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/gamesPlayed"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/simpleName"
+            app:layout_constraintStart_toStartOf="@+id/gamesPlayedList"
+            />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -90,7 +90,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="10dp"
-        android:background="#181829"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
