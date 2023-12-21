@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.soccertask"
+    namespace = "com.example.basketballapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.soccertask"
+        applicationId = "com.example.basketballapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -65,4 +65,5 @@ dependencies {
     implementation ("com.google.android.material:material:1.11.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 
+    implementation ("com.squareup.picasso:picasso:2.8")
 }

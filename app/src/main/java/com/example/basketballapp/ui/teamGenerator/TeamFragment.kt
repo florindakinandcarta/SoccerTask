@@ -1,4 +1,4 @@
-package com.example.soccertask.ui.teamGenerator
+package com.example.basketballapp.ui.teamGenerator
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.soccertask.databinding.TeamGeneratorBinding
-import com.example.soccertask.ui.TeamViewModel
+import com.example.basketballapp.databinding.TeamGeneratorBinding
+import com.example.basketballapp.ui.TeamViewModel
 
 class TeamFragment: Fragment() {
     private lateinit var binding: TeamGeneratorBinding
@@ -34,10 +34,19 @@ class TeamFragment: Fragment() {
                 .bufferedReader().use { it.readText() })
             viewModel.teamResults.observe(viewLifecycleOwner) { results ->
                 adapter.submitTeamList(results)
+                binding.sort.setOnCheckedChangeListener { _, isChecked ->
+                    if (isChecked) {
+                        adapter.orderByDescending(results)
+                        binding.teamsList.scrollToPosition(0)
+                    } else {
+                        adapter.orderByAscending(results)
+                    }
+                }
+
             }
+            binding.teamsList.layoutManager = LinearLayoutManager(activity)
+            adapter = TeamAdapter()
+            binding.teamsList.adapter = adapter
         }
-        binding.teamsList.layoutManager = LinearLayoutManager(activity)
-        adapter = TeamAdapter()
-        binding.teamsList.adapter = adapter
     }
 }

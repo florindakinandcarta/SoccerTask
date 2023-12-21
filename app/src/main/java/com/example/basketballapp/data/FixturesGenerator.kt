@@ -1,10 +1,6 @@
-package com.example.soccertask.data
+package com.example.basketballapp.data
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
-import com.example.soccertask.data.source.Team
+import com.example.basketballapp.data.source.Team
 
 class FixturesGenerator{
     fun generateFixtures(teams: List<Team>): List<Pair<Team, Team>> {

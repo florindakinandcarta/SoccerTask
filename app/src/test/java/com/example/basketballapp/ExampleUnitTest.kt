@@ -1,4 +1,4 @@
-package com.example.soccertask
+package com.example.basketballapp
 
 import org.junit.Test
 

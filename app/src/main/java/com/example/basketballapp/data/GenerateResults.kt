@@ -1,6 +1,6 @@
-package com.example.soccertask.data
+package com.example.basketballapp.data
 
-import com.example.soccertask.data.source.Team
+import com.example.basketballapp.data.source.Team
 import kotlin.random.Random
 
 private const val WIN_POINTS = 3
@@ -12,8 +12,8 @@ class GenerateResults(private val teamsData: List<Team>) {
             val homeTeam = fixture.first
             val awayTeam = fixture.second
 
-            val homeGoals:Int = Random.nextInt(0,6)
-            val awayGoals:Int = Random.nextInt(0,6)
+            val homeGoals:Int = Random.nextInt(GOALS_SCORED)
+            val awayGoals:Int = Random.nextInt(GOALS_SCORED)
             homeTeam.goals = homeGoals
             awayTeam.goals = awayGoals
             when {

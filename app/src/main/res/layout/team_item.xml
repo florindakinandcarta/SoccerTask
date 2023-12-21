@@ -7,76 +7,81 @@
             name="background_color"
             type="String" />
     </data>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/rectangle">
-                <!--                this needs to change latter it's just for display now-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle">
+        <!--                this needs to change latter it's just for display now-->
 
-                <TextView
-                    android:id="@+id/teamStanding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/randomNumber"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/teamStanding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/randomNumber"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/teamLogo"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="5dp"
-                    android:contentDescription="@string/firstTeam"
-                    app:layout_constraintBottom_toBottomOf="@+id/teamStanding"
-                    app:layout_constraintEnd_toStartOf="@id/teamName"
-                    app:layout_constraintStart_toEndOf="@id/teamStanding"
-                    app:layout_constraintTop_toTopOf="@id/teamStanding" />
+        <ImageView
+            android:id="@+id/teamLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/firstTeam"
+            app:layout_constraintBottom_toBottomOf="@+id/teamStanding"
+            app:layout_constraintEnd_toStartOf="@id/teamName"
+            app:layout_constraintStart_toEndOf="@id/teamStanding"
+            app:layout_constraintTop_toTopOf="@id/teamStanding" />
 
-                <TextView
-                    android:id="@+id/teamCity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/city"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/teamName"
-                    app:layout_constraintStart_toStartOf="@id/teamName" />
+        <TextView
+            android:id="@+id/teamCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/teamName"
+            app:layout_constraintStart_toStartOf="@id/teamName" />
 
-                <TextView
-                    android:id="@+id/teamName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:lineBreakStyle="strict"
-                    android:text="@string/firstTeam"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/teamLogo"
-                    app:layout_constraintStart_toEndOf="@id/teamLogo" />
+        <TextView
+            android:id="@+id/teamName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:text="@string/firstTeam"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/teamCity"
+            app:layout_constraintBottom_toBottomOf="@id/teamPoints"
+            app:layout_constraintStart_toEndOf="@id/teamLogo"
+            app:layout_constraintEnd_toStartOf="@id/teamPoints"
+            />
 
-                <TextView
-                    android:id="@+id/teamPoints"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/randomNumber"
-                    android:textColor="@color/white"
-                    android:textSize="40sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/teamName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/teamName" />
+        <TextView
+            android:id="@+id/teamPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/randomNumber"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

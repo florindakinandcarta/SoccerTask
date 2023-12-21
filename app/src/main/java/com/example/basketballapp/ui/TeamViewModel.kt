@@ -1,12 +1,12 @@
-package com.example.soccertask.ui
+package com.example.basketballapp.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.soccertask.data.FixturesGenerator
-import com.example.soccertask.data.GenerateResults
-import com.example.soccertask.data.source.Team
-import com.example.soccertask.data.source.TeamData
+import com.example.basketballapp.data.FixturesGenerator
+import com.example.basketballapp.data.GenerateResults
+import com.example.basketballapp.data.source.Team
+import com.example.basketballapp.data.source.TeamData
 import com.google.gson.Gson
 
 class TeamViewModel : ViewModel() {

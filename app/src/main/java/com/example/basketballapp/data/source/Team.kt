@@ -1,4 +1,4 @@
-package com.example.soccertask.data.source
+package com.example.basketballapp.data.source
 
 import com.google.gson.annotations.SerializedName
 data class TeamData(
@@ -15,14 +15,5 @@ data class Team(
     @SerializedName("simpleName") var simpleName: String?= null,
     @SerializedName("location") var location: String?= null,
     @SerializedName("imgUrl") var imgUrl: String?= null,
+    @SerializedName("position") var position: Int = 0,
 )
-//{
-//    fun getMatchesForTeam(teamName: String?): List<GameResult>{
-//        val matches = playedGames.filter {
-//            it.homeTeam.teamName == teamName || it.awayTeam.teamName == teamName
-//        }
-//        System.out.println(matches)
-//
-//        return matches
-//    }
-//}

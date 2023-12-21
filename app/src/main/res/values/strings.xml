@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SoccerTask</string>
+    <string name="app_name">Basketball Scores</string>
     <string name="teamNameDetails">Team Name Details</string>
     <string name="randomNumber">42</string>
     <string name="coachName">Florinda Hasani</string>
@@ -8,5 +8,8 @@
     <string name="firstTeam">First team</string>
     <string name="vs">vs</string>
     <string name="minus">-</string>
+    <string name="sort">Sort</string>
+    <string name="title">Team Standings</string>
+    <string name="titleDetails">Team Details</string>
 
 </resources>
