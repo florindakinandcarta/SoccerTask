@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/teamDetails"
-        android:name="com.example.soccertask.ui.teamDetails.TeamDetails"
+        android:name="com.example.basketballapp.ui.teamDetails.TeamDetails"
         tools:layout="@layout/team_details"
         android:label="TeamDetails" >
         <argument
@@ -23,19 +23,19 @@
             app:nullable="true"
             />
         <argument
-            android:name="team_wins"
+            android:name="simple_name"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
             />
         <argument
-            android:name="team_loses"
+            android:name="city"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
             />
         <argument
-            android:name="team_draws"
+            android:name="imgUrl"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/teamGenerator"
-        android:name="com.example.soccertask.ui.teamGenerator.TeamGenerator"
+        android:name="com.example.basketballapp.ui.teamGenerator.TeamFragment"
         tools:layout="@layout/team_generator"
         android:label="TeamGenerator" >
         <action
@@ -65,19 +65,19 @@
             app:nullable="true"
             />
         <argument
-            android:name="team_wins"
+            android:name="simple_name"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
             />
         <argument
-            android:name="team_loses"
+            android:name="city"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"
             />
         <argument
-            android:name="team_draws"
+            android:name="imgUrl"
             app:argType="string"
             android:defaultValue=" "
             app:nullable="true"

@@ -1,17 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/teamDetailsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        app:popupTheme="@style/Theme.Design.Light.NoActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/titleDetails"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:layout_margin="15dp"
+            android:layout_gravity="end"
+            />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="start"
+            android:layout_margin="15dp"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/teamDetailsToolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+    <ImageView
+        android:id="@+id/teamLogoDetails"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/teamNameDetails"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/image_rectangle"
+        android:contentDescription="@string/firstTeam"
+        />
+
     <TextView
         android:id="@+id/teamNameDetails"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Team Name Details"
-        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/teamLogoDetails"
+        app:layout_constraintEnd_toStartOf="@+id/teamPointsDetails"
+        android:text="@string/teamNameDetails"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:singleLine="false"
+        android:textSize="25sp"
         android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/teamPointsDetails"
@@ -20,81 +85,60 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/teamNameDetails"
         app:layout_constraintBottom_toBottomOf="@id/teamNameDetails"
-        android:textSize="20sp"
-        android:text="45"
+        android:textSize="30sp"
+        android:text="@string/randomNumber"
         android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         />
-    <TextView
-        android:id="@+id/gamesWon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Games Won"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/teamNameDetails"
-        app:layout_constraintStart_toStartOf="@id/teamNameDetails"
-        android:layout_margin="20dp"
-        />
-    <TextView
-        android:id="@+id/gamesLost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Games Lost"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/gamesWon"
-        app:layout_constraintStart_toStartOf="@id/teamNameDetails"
-        android:layout_margin="20dp"
-        />
-    <TextView
-        android:id="@+id/gamesWonPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/gamesWon"
-        app:layout_constraintStart_toEndOf="@id/gamesWon"
-        app:layout_constraintBottom_toBottomOf="@id/gamesWon"
-        android:layout_marginStart="20dp"
-        />
-    <TextView
-        android:id="@+id/gamesLostPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/gamesLost"
-        app:layout_constraintStart_toEndOf="@id/gamesLost"
-        app:layout_constraintBottom_toBottomOf="@id/gamesLost"
-        android:layout_marginStart="20dp"
-        />
-    <TextView
-        android:id="@+id/gamesDraw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Draw Games"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/gamesLost"
-        app:layout_constraintStart_toStartOf="@id/teamNameDetails"
-        android:layout_margin="20dp"
-        />
-    <TextView
-        android:id="@+id/gamesDrawPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/gamesDraw"
-        app:layout_constraintStart_toEndOf="@id/gamesDraw"
-        app:layout_constraintBottom_toBottomOf="@id/gamesDraw"
-        android:layout_marginStart="20dp"
-        />
-    <Button
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="20dp"
-        android:text="Back to the list"
-        />
+        <TextView
+            android:id="@+id/simpleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/teamNameDetails"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/teamNameDetails"
+            app:layout_constraintStart_toStartOf="@id/teamNameDetails"
+            />
+        <TextView
+            android:id="@+id/teamCityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/city"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/teamPointsDetails"
+            app:layout_constraintTop_toBottomOf="@+id/teamPointsDetails"
+            />
+        <TextView
+            android:id="@+id/gamesPlayedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/gamesPlayed"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/simpleName"
+            app:layout_constraintStart_toStartOf="@+id/gamesPlayedList"
+            />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gamesPlayedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gamesPlayedTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
