@@ -13,29 +13,36 @@ import com.squareup.picasso.Picasso
 
 
 class TeamAdapter: ListAdapter<Team, TeamAdapter.ViewHolder>(TeamDiffCallBack()) {
-    private var teams: List<Team> = listOf()
-
-    fun submitTeamList(newList: List<Team>) {
-        teams = newList
-        submitList(teams)
+    fun orderByDescending(){
+        submitList(currentList.sortedBy { it.points })
     }
-    fun orderByDescending(newList: List<Team>){
-        teams = newList.sortedByDescending { it.points }
-        assignPositions()
-        submitList(teams)
+    fun orderByAscending(){
+        submitList(currentList.sortedByDescending { it.points })
     }
-    fun orderByAscending(newList: List<Team>){
-        teams = newList.sortedBy{ it.points }
-        submitList(teams)
-    }
-
-    private fun assignPositions() {
-        teams.forEachIndexed { index, team ->
-            team.position = index + 1
+    inner class ViewHolder(private val binding: TeamItemBinding):
+        RecyclerView.ViewHolder(binding.root){
+            fun bind(team: Team){
+                binding.apply {
+                    teamName.text = team.teamName
+                    teamPoints.text = team.points.toString()
+                    teamCity.text = team.location
+                    Picasso.get().load(team.imgUrl) .into(teamLogo)
+                    val bundle = Bundle().apply {
+                        putString("team_name_data", team.teamName)
+                        putString("team_points", team.points.toString())
+                        putString("simple_name", team.simpleName)
+                        putString("city", team.location)
+                        putString("imgUrl", team.imgUrl)
+                    }
+                    teamName.setOnClickListener {
+                        it.findNavController().navigate(
+                            R.id.action_teamGenerator_to_teamDetails,
+                            bundle
+                        )
+                    }
+                }
+            }
         }
-    }
-    inner class ViewHolder( val binding: TeamItemBinding):
-        RecyclerView.ViewHolder(binding.root)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = TeamItemBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -45,27 +52,7 @@ class TeamAdapter: ListAdapter<Team, TeamAdapter.ViewHolder>(TeamDiffCallBack())
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val teamList = teams[position]
-        with(holder.binding){
-           teamName.text = teamList.teamName
-            teamPoints.text = teamList.points.toString()
-            teamStanding.text= teams[position].position.toString()
-            teamCity.text = teamList.location
-            Picasso.get().load(teamList.imgUrl) .into(teamLogo)
-            val bundle = Bundle().apply {
-                putString("team_name_data", teamList.teamName)
-                putString("team_points", teamList.points.toString())
-                putString("simple_name", teamList.simpleName)
-                putString("city", teamList.location)
-                putString("imgUrl", teamList.imgUrl)
-            }
-            teamName.setOnClickListener {
-                it.findNavController().navigate(
-                    R.id.action_teamGenerator_to_teamDetails,
-                    bundle
-                )
-            }
-        }
+            val currentItem = getItem(position)
+            holder.bind(currentItem)
     }
-    override fun getItemCount() = teams.size
 }

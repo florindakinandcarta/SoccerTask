@@ -33,13 +33,12 @@ class TeamFragment: Fragment() {
             viewModel.fetchTeamsInfo(safeContext.assets.open("teams.json")
                 .bufferedReader().use { it.readText() })
             viewModel.teamResults.observe(viewLifecycleOwner) { results ->
-                adapter.submitTeamList(results)
+                adapter.submitList(results)
                 binding.sort.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) {
-                        adapter.orderByDescending(results)
-                        binding.teamsList.scrollToPosition(0)
+                        adapter.orderByAscending()
                     } else {
-                        adapter.orderByAscending(results)
+                        adapter.orderByDescending()
                     }
                 }
 

@@ -15,5 +15,11 @@ data class Team(
     @SerializedName("simpleName") var simpleName: String?= null,
     @SerializedName("location") var location: String?= null,
     @SerializedName("imgUrl") var imgUrl: String?= null,
-    @SerializedName("position") var position: Int = 0,
+    @SerializedName("teamFixtures") var teamFixtures: List<Pair<TeamFixtures,TeamFixtures>>,
+)
+
+data class TeamFixtures(
+    @SerializedName("teamName") val teamName: String? = null,
+    @SerializedName("goals") var goals: Int = 0,
+    @SerializedName("imgUrl") var imgUrl: String?,
 )

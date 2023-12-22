@@ -12,33 +12,17 @@
         android:layout_height="100dp"
         android:layout_margin="10dp"
         android:background="@drawable/rectangle">
-        <!--                this needs to change latter it's just for display now-->
-
-        <TextView
-            android:id="@+id/teamStanding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/randomNumber"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/teamLogo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="5dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
             android:contentDescription="@string/firstTeam"
-            app:layout_constraintBottom_toBottomOf="@+id/teamStanding"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/teamName"
-            app:layout_constraintStart_toEndOf="@id/teamStanding"
-            app:layout_constraintTop_toTopOf="@id/teamStanding" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/teamCity"
