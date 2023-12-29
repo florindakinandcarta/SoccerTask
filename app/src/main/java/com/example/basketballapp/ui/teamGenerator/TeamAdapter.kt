@@ -55,4 +55,6 @@ class TeamAdapter: ListAdapter<Team, TeamAdapter.ViewHolder>(TeamDiffCallBack())
             val currentItem = getItem(position)
             holder.bind(currentItem)
     }
+
+    override fun getItemCount() = currentList.size
 }
